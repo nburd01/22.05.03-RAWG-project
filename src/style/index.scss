@@ -1,0 +1,19 @@
+$color-red: rgb(255, 20, 20);
+
+p {
+  color: $color-red;
+}
+
+body {
+  background-image: url('../assets/images/northdace_landscape.jpg');
+}
+
+@font-face {
+  font-family: 'HELVETICAMEDIT', sans-serif;
+  src: url('../assets/fonts/HELVETICAMEDIT.TTF');
+}
+
+p {
+  color: $color-red;
+  font-family: 'HELVETICAMEDIT';
+}
