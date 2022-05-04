@@ -2,10 +2,6 @@ console.log("Hello!")
 
 import './style/index.scss'; // Attention ici, il faut bien mettre l'extension `.scss`
 
-
-
-import './scss/index.scss';
-
 import { myFunction } from './js/file2'; // Pas besoin de mettre le '.js' à la fin !
 import { myObject, anotherFunction } from './js/file3';
 
