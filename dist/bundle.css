@@ -33,7 +33,6 @@ body {
 
 header {
   display: flex;
-  background-color: #277938;
   justify-content: space-around;
   align-items: center;
   height: 15vh;
@@ -41,7 +40,6 @@ header {
 
 header .title {
   display: flex;
-  background-color: aqua;
   width: 50%;
   padding: 1em;
 }
