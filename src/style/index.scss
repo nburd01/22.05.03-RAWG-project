@@ -71,3 +71,16 @@ header .search-bar{
   font-size: 2em;
   font-weight: bold;
 }
+
+.articles{
+  display:flex;
+  flex-wrap: wrap;
+}
+.cardGame{
+  display: block;
+  width: 30%;
+  padding: 1em;
+}
+.cardGame img{
+  width: 100%;
+}

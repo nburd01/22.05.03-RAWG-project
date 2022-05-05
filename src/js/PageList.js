@@ -7,8 +7,10 @@ const PageList = (argument = '') => {
     const displayResults = (articles) => {
       const resultsContent = articles.map((article) => (
         `<article class="cardGame">
+          <img src='${article.background_image}'>
           <h1>${article.name}</h1>
           <h2>${article.released}</h2>
+          <p src='${article.platforms[0,1]}'>
           <a href="#pagedetail/${article.id}">${article.id}</a>
         </article>`
       ));

@@ -5,9 +5,10 @@ const PageDetail = (argument) => {
     const cleanedArgument = argument.trim().replace(/\s+/g, "-");
 
     const displayGame = (gameData) => {
-      const { name, released, description } = gameData;
+      const { name, released, description, rating_top } = gameData;
       const articleDOM = document.querySelector(".page-detail .article");
       articleDOM.querySelector("h1.title").innerHTML = name;
+      articleDOM.querySelector("p.rating_top").innerHTML = rating_top;
       articleDOM.querySelector("p.release-date span").innerHTML = released;
       articleDOM.querySelector("p.description").innerHTML = description;
     };
@@ -30,6 +31,7 @@ const PageDetail = (argument) => {
           <h1 class="title"></h1>
           <p class="release-date">Release date : <span></span></p>
           <p class="description"></p>
+          <p class="rating_top"></p>
         </div>
       </section>
     `;
