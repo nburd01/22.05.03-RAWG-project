@@ -7,18 +7,8 @@
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
-
-/***/ "./src/style/index.scss":
-/*!******************************!*\
-  !*** ./src/style/index.scss ***!
-  \******************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://test-webpack/./src/style/index.scss?");
-
-/***/ }),
 
 /***/ "./src/index.js":
 /*!**********************!*\
@@ -26,40 +16,67 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_index_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style/index.scss */ \"./src/style/index.scss\");\n/* harmony import */ var _js_file2__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/file2 */ \"./src/js/file2.js\");\n/* harmony import */ var _js_file3__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js/file3 */ \"./src/js/file3.js\");\n/* harmony import */ var _js_dayjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./js/dayjs */ \"./src/js/dayjs.js\");\n/* harmony import */ var _js_dayjs__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_js_dayjs__WEBPACK_IMPORTED_MODULE_3__);\nconsole.log(\"Hello!\")\n\n; // Attention ici, il faut bien mettre l'extension `.scss`\n\n // Pas besoin de mettre le '.js' à la fin !\n\n\n(0,_js_file2__WEBPACK_IMPORTED_MODULE_1__.myFunction)();\n(0,_js_file3__WEBPACK_IMPORTED_MODULE_2__.anotherFunction)(_js_file3__WEBPACK_IMPORTED_MODULE_2__.myObject.message);\n\n\nconsole.log(_js_dayjs__WEBPACK_IMPORTED_MODULE_3___default()('2018-08-08').format('MMMM DD YYYY')); // January 18 2021\nconsole.log(_js_dayjs__WEBPACK_IMPORTED_MODULE_3___default()().subtract(10, 'days').format('DD/MM/YYYY')); // 08/01/2021\n\n\n\n\n//# sourceURL=webpack://test-webpack/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_routes_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js/routes.js */ \"./src/js/routes.js\");\n/* harmony import */ var _style_index_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style/index.scss */ \"./src/style/index.scss\");\n\n\n\nvar callRoute = function callRoute() {\n  var hash = window.location.hash;\n  var pathParts = hash.substring(1).split('/');\n  var pageName = pathParts[0];\n  var pageArgument = pathParts[1] || '';\n  var pageFunction = _js_routes_js__WEBPACK_IMPORTED_MODULE_0__.routes[pageName];\n\n  if (pageFunction !== undefined) {\n    pageFunction(pageArgument);\n  }\n};\n\nwindow.addEventListener('hashchange', function () {\n  return callRoute();\n});\nwindow.addEventListener('DOMContentLoaded', function () {\n  return callRoute();\n});\n\n//# sourceURL=webpack://test-webpack/./src/index.js?");
 
 /***/ }),
 
-/***/ "./src/js/dayjs.js":
-/*!*************************!*\
-  !*** ./src/js/dayjs.js ***!
-  \*************************/
-/***/ (() => {
-
-eval("console.log(dayjs('2018-08-08').format('MMMM DD YYYY')); // January 18 2021\nconsole.log(dayjs().subtract(10, 'days').format('DD/MM/YYYY')); // 08/01/2021\n\n//# sourceURL=webpack://test-webpack/./src/js/dayjs.js?");
-
-/***/ }),
-
-/***/ "./src/js/file2.js":
-/*!*************************!*\
-  !*** ./src/js/file2.js ***!
-  \*************************/
+/***/ "./src/js/Home.js":
+/*!************************!*\
+  !*** ./src/js/Home.js ***!
+  \************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"myFunction\": () => (/* binding */ myFunction)\n/* harmony export */ });\n// file2.js\n\nconst myFunction = () => {\n    console.log(\"Hey, It's working\");\n  };\n  \n  \n  \n\n//# sourceURL=webpack://test-webpack/./src/js/file2.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Home\": () => (/* binding */ Home)\n/* harmony export */ });\nvar Home = function Home() {\n  var argument = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';\n  console.log('Home', argument);\n};\n\n\n\n//# sourceURL=webpack://test-webpack/./src/js/Home.js?");
 
 /***/ }),
 
-/***/ "./src/js/file3.js":
-/*!*************************!*\
-  !*** ./src/js/file3.js ***!
-  \*************************/
+/***/ "./src/js/PageDetail.js":
+/*!******************************!*\
+  !*** ./src/js/PageDetail.js ***!
+  \******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"anotherFunction\": () => (/* binding */ anotherFunction),\n/* harmony export */   \"myObject\": () => (/* binding */ myObject)\n/* harmony export */ });\n// file3.js\n\nconst myObject = {\n  message: \"Wow that's amazing bro\",\n};\n\nconst anotherFunction = (text) => {\n  console.log(text);\n};\n\n\n\n\n//# sourceURL=webpack://test-webpack/./src/js/file3.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"PageDetail\": () => (/* binding */ PageDetail)\n/* harmony export */ });\n/* harmony import */ var _apikey__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! .//apikey */ \"./src/js/apikey.js\");\n\n\nvar PageDetail = function PageDetail(argument) {\n  var preparePage = function preparePage() {\n    var cleanedArgument = argument.trim().replace(/\\s+/g, \"-\");\n\n    var displayGame = function displayGame(gameData) {\n      var name = gameData.name,\n          released = gameData.released,\n          description = gameData.description;\n      var articleDOM = document.querySelector(\".page-detail .article\");\n      articleDOM.querySelector(\"h1.title\").innerHTML = name;\n      articleDOM.querySelector(\"p.release-date span\").innerHTML = released;\n      articleDOM.querySelector(\"p.description\").innerHTML = description;\n    };\n\n    var fetchGame = function fetchGame(url, argument) {\n      fetch(\"\".concat(url, \"/\").concat(argument, \"?key=\").concat(_apikey__WEBPACK_IMPORTED_MODULE_0__.APIKey)).then(function (response) {\n        return response.json();\n      }).then(function (responseData) {\n        displayGame(responseData);\n      });\n    };\n\n    fetchGame('https://api.rawg.io/api/games', cleanedArgument);\n  };\n\n  var render = function render() {\n    pageContent.innerHTML = \"\\n      <section class=\\\"page-detail\\\">\\n        <div class=\\\"article\\\">\\n          <h1 class=\\\"title\\\"></h1>\\n          <p class=\\\"release-date\\\">Release date : <span></span></p>\\n          <p class=\\\"description\\\"></p>\\n        </div>\\n      </section>\\n    \";\n    preparePage();\n  };\n\n  render();\n};\n\n\n\n//# sourceURL=webpack://test-webpack/./src/js/PageDetail.js?");
+
+/***/ }),
+
+/***/ "./src/js/PageList.js":
+/*!****************************!*\
+  !*** ./src/js/PageList.js ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"PageList\": () => (/* binding */ PageList)\n/* harmony export */ });\n/* harmony import */ var _apikey__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! .//apikey */ \"./src/js/apikey.js\");\n\n\nvar PageList = function PageList() {\n  var argument = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';\n\n  var preparePage = function preparePage() {\n    var cleanedArgument = argument.trim().replace(/\\s+/g, '-');\n\n    var displayResults = function displayResults(articles) {\n      var resultsContent = articles.map(function (article) {\n        return \"<article class=\\\"cardGame\\\">\\n          <h1>\".concat(article.name, \"</h1>\\n          <h2>\").concat(article.released, \"</h2>\\n          <a href=\\\"#pagedetail/\").concat(article.id, \"\\\">\").concat(article.id, \"</a>\\n        </article>\");\n      });\n      var resultsContainer = document.querySelector('.page-list .articles');\n      resultsContainer.innerHTML = resultsContent.join(\"\\n\");\n    };\n\n    var fetchList = function fetchList(url, argument) {\n      var finalURL = argument ? \"\".concat(url, \"&search=\").concat(argument) : url;\n      fetch(finalURL).then(function (response) {\n        return response.json();\n      }).then(function (responseData) {\n        displayResults(responseData.results);\n      });\n    };\n\n    fetchList(\"https://api.rawg.io/api/games?key=\".concat(_apikey__WEBPACK_IMPORTED_MODULE_0__.APIKey), cleanedArgument);\n  };\n\n  var render = function render() {\n    pageContent.innerHTML = \"\\n      <section class=\\\"page-list\\\">\\n        <div class=\\\"articles\\\">Loading...</div>\\n      </section>\\n    \";\n    preparePage();\n  };\n\n  render();\n};\n\n\n\n//# sourceURL=webpack://test-webpack/./src/js/PageList.js?");
+
+/***/ }),
+
+/***/ "./src/js/apikey.js":
+/*!**************************!*\
+  !*** ./src/js/apikey.js ***!
+  \**************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"APIKey\": () => (/* binding */ APIKey)\n/* harmony export */ });\nvar APIKey = \"cc466081007b4a45a97164ff5ea6362b\";\n\n\n//# sourceURL=webpack://test-webpack/./src/js/apikey.js?");
+
+/***/ }),
+
+/***/ "./src/js/routes.js":
+/*!**************************!*\
+  !*** ./src/js/routes.js ***!
+  \**************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"routes\": () => (/* binding */ routes)\n/* harmony export */ });\n/* harmony import */ var _Home_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Home.js */ \"./src/js/Home.js\");\n/* harmony import */ var _PageList_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./PageList.js */ \"./src/js/PageList.js\");\n/* harmony import */ var _PageDetail_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./PageDetail.js */ \"./src/js/PageDetail.js\");\n\n\n\nvar routes = {\n  '': _Home_js__WEBPACK_IMPORTED_MODULE_0__.Home,\n  'pagelist': _PageList_js__WEBPACK_IMPORTED_MODULE_1__.PageList,\n  'pagedetail': _PageDetail_js__WEBPACK_IMPORTED_MODULE_2__.PageDetail\n};\n\n\n//# sourceURL=webpack://test-webpack/./src/js/routes.js?");
+
+/***/ }),
+
+/***/ "./src/style/index.scss":
+/*!******************************!*\
+  !*** ./src/style/index.scss ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://test-webpack/./src/style/index.scss?");
 
 /***/ })
 
@@ -90,18 +107,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 	}
 /******/ 	
 /************************************************************************/
-/******/ 	/* webpack/runtime/compat get default export */
-/******/ 	(() => {
-/******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__webpack_require__.n = (module) => {
-/******/ 			var getter = module && module.__esModule ?
-/******/ 				() => (module['default']) :
-/******/ 				() => (module);
-/******/ 			__webpack_require__.d(getter, { a: getter });
-/******/ 			return getter;
-/******/ 		};
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports

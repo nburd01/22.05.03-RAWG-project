@@ -1,8 +1,8 @@
 /*!*************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[3]!./src/style/index.scss ***!
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/style/index.scss ***!
   \*************************************************************************************************************************************************************************************/
 p {
-  color: rgb(68, 39, 138);
+  color: rgb(255, 20, 20);
 }
 
 body {
@@ -14,6 +14,6 @@ body {
   src: url(02ffb011c8730fd1876d.TTF);
 }
 p {
-  color: rgb(68, 39, 138);
+  color: rgb(255, 20, 20);
   font-family: "HELVETICAMEDIT";
 }
