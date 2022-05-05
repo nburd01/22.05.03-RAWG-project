@@ -17,4 +17,3 @@ const callRoute = () => {
 
 window.addEventListener('hashchange', () => callRoute());
 window.addEventListener('DOMContentLoaded', () => callRoute());
-console.log('- index js')

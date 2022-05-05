@@ -3,4 +3,3 @@ const Home = (argument = '') => {
 };
 
 export { Home };
-console.log('- Home js')

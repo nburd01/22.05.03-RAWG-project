@@ -1,16 +1,26 @@
 import {APIKey} from './/apikey';
 
+const form = document.getElementById('form');
+form.addEventListener('submit', (e) =>{
+  e.preventDefault()
+  const searchInput = document.getElementById("searchInput").value;
+  console.log(searchInput);
+  PageDetail(searchInput);
+})
+
+
 const PageDetail = (argument) => {
   const preparePage = () => {
     const cleanedArgument = argument.trim().replace(/\s+/g, "-");
 
     const displayGame = (gameData) => {
+
       const { name, released, description, rating_top } = gameData;
-      const articleDOM = document.querySelector(".page-detail .article");
-      articleDOM.querySelector("h1.title").innerHTML = name;
-      articleDOM.querySelector("p.rating_top").innerHTML = rating_top;
-      articleDOM.querySelector("p.release-date span").innerHTML = released;
-      articleDOM.querySelector("p.description").innerHTML = description;
+        const articleDOM = document.querySelector(".page-detail .article");
+        articleDOM.querySelector("h1.title").innerHTML = name;
+        articleDOM.querySelector("p.rating_top").innerHTML = rating_top;
+        articleDOM.querySelector("p.release-date span").innerHTML = released;
+        articleDOM.querySelector("p.description").innerHTML = description;
     };
 
     const fetchGame = (url, argument) => {
@@ -42,4 +52,6 @@ const PageDetail = (argument) => {
 };
 
 export {PageDetail};
-console.log('- PageDetail')
+
+
+

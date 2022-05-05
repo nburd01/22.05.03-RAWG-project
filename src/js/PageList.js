@@ -46,4 +46,3 @@ const PageList = (argument = '') => {
 
 
 export { PageList };
-console.log('- PageList')
