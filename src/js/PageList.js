@@ -8,9 +8,12 @@ const PageList = (argument) => {
       const resultsContent = articles.map((article) => (
         `<article class="cardGame">
           <img src='${article.background_image}'>
-          <h1>${article.name}</h1>
-          <h2>${article.released}</h2>
-          <p src='${article.platforms[0,1]}'>
+          <h2>${article.name}</h2>
+          <h3>release : ${article.released}</h3>
+          <p>rating : ${article.rating}</p>
+          <p>${article.genres.map(genre => ` ${genre.name} `)}</p>
+          <p>${article.tags.map(tag => ` ${tag.name} `)[0]}</p>
+
           <a href="#pagedetail/${article.id}">${article.id}</a>
         </article>`
       ));
