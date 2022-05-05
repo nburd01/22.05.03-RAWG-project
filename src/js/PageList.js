@@ -18,6 +18,7 @@ const PageList = (argument = '') => {
       resultsContainer.innerHTML = resultsContent.join("\n");
     };
 
+
     const fetchList = (url, argument) => {
       const finalURL = argument ? `${url}&search=${argument}` : url;
       fetch(finalURL)
@@ -27,8 +28,8 @@ const PageList = (argument = '') => {
         });
     };
 
-    fetchList(`https://api.rawg.io/api/games?key=${APIKey}`, cleanedArgument);
-  };
+    fetchList(`https://api.rawg.io/api/games?key=${APIKey}&page_size=9`, cleanedArgument);
+  };  
 
   const render = () => {
     pageContent.innerHTML = `
@@ -45,3 +46,4 @@ const PageList = (argument = '') => {
 
 
 export { PageList };
+console.log('- PageList')

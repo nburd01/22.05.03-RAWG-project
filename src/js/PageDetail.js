@@ -35,11 +35,11 @@ const PageDetail = (argument) => {
         </div>
       </section>
     `;
-
-    preparePage();
+    preparePage()
   };
 
   render();
 };
 
 export {PageDetail};
+console.log('- PageDetail')

@@ -9,3 +9,5 @@ const routes = {
 };
 
 export {routes};
+
+console.log('- routes')
