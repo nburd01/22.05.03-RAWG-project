@@ -24,6 +24,7 @@ const PageList = (argument = '') => {
       fetch(finalURL)
         .then((response) => response.json())
         .then((responseData) => {
+          console.log(responseData)
           displayResults(responseData.results)
         });
     };

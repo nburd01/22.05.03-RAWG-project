@@ -1,5 +1,13 @@
 import {routes} from './js/routes.js';
+import {PageList} from './js/PageList.js';
 import './style/index.scss';
+
+const form = document.getElementById('form');
+form.addEventListener('submit', (e) =>{
+  e.preventDefault()
+  const searchInput = document.getElementById("searchInput").value;
+  PageList(searchInput);
+})
 
 
 const callRoute = () => {

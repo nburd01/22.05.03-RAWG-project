@@ -1,13 +1,5 @@
 import {APIKey} from './/apikey';
 
-const form = document.getElementById('form');
-form.addEventListener('submit', (e) =>{
-  e.preventDefault()
-  const searchInput = document.getElementById("searchInput").value;
-  console.log(searchInput);
-  PageDetail(searchInput);
-})
-
 
 const PageDetail = (argument) => {
   const preparePage = () => {
@@ -15,10 +7,11 @@ const PageDetail = (argument) => {
 
     const displayGame = (gameData) => {
 
-      const { name, released, description, rating_top } = gameData;
+      const { name, released, description, rating_top, background_image } = gameData;
         const articleDOM = document.querySelector(".page-detail .article");
         articleDOM.querySelector("h1.title").innerHTML = name;
         articleDOM.querySelector("p.rating_top").innerHTML = rating_top;
+        articleDOM.querySelector("img.background_image").setAttribute("src", `${background_image}`);
         articleDOM.querySelector("p.release-date span").innerHTML = released;
         articleDOM.querySelector("p.description").innerHTML = description;
     };
@@ -42,6 +35,7 @@ const PageDetail = (argument) => {
           <p class="release-date">Release date : <span></span></p>
           <p class="description"></p>
           <p class="rating_top"></p>
+          <img class='background_image'/>
         </div>
       </section>
     `;
