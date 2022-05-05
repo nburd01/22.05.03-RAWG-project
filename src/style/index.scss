@@ -1,19 +1,73 @@
-$color-red: rgb(255, 20, 20);
-
-p {
-  color: $color-red;
+*, *::before, *::after{
+  box-sizing: border-box;
 }
 
-body {
-  background-image: url('../assets/images/northdace_landscape.jpg');
+html{
+font-size: 16px;
+--primary:#ffffff; 
+--secondary:#181918; 
+--third:#d20f33; 
 }
 
-@font-face {
-  font-family: 'HELVETICAMEDIT', sans-serif;
-  src: url('../assets/fonts/HELVETICAMEDIT.TTF');
+body{
+  line-height: 1,625;
+  background: var(--secondary);
+  margin: 0;
+  font-family: 'Open Sans', 'sans-serif' ;
+  color: var(--primary);
+  //  background:
+  //      linear-gradient(to top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)),
+  //      url(/home/niallyb/TheHackingProject/22.05.03-RAWG-project/src/assets/images/Desktop-GameList.png) top center / cover no-repeat;
+}
+.container{
+  width: 80%;
+  margin: 0 auto;
+  padding: 0 20px;
+  background-color: var(--secondary);
+}
+.button{
+  background-color: var(--third);
 }
 
-p {
-  color: $color-red;
-  font-family: 'HELVETICAMEDIT';
+header{
+  display: flex;
+  background-color: #277938;
+  justify-content: space-around;
+  align-items: center;
+  height: 15vh;
+}
+header .title{
+  display: flex;
+  background-color: aqua;
+  width: 50%;
+  padding: 1em;
+}
+header .search-bar{
+  display: flex;
+  background-color: var(--third);
+  border-radius: 20px;
+  padding: 0.4em;
+}
+.container .welcome{
+  background-color: rgb(13, 13, 138);
+  display: flex;
+}
+  .container .welcome .title{
+      padding: 200px;
+  }
+  .container .welcome .paragraph{
+      padding: 200px;
+  }
+.container .gallery{
+  display: flex;
+  height: 60vh;
+  background-color: rgb(128, 128, 206);
+}
+.filter .button{
+  padding: none;
+}
+
+.cards p{
+  font-size: 2em;
+  font-weight: bold;
 }
