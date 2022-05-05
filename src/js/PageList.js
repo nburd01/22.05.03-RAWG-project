@@ -1,6 +1,6 @@
 import {APIKey} from './/apikey';
 
-const PageList = (argument = '') => {
+const PageList = (argument) => {
   const preparePage = () => {
     const cleanedArgument = argument.trim().replace(/\s+/g, '-');
 
